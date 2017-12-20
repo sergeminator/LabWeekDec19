@@ -23,7 +23,7 @@ static const int SizeArray = 5;
 
 bool Init(int parameter[], int sizeOfArray)
 {
-	if (sizeOfArray <= 0 && sizeOfArray <= SizeArray )
+	if (sizeOfArray <= 0 || sizeOfArray > SizeArray )
 	{
 		return false;
 	}
@@ -61,7 +61,7 @@ int MultiplyBy10AndIncrease(int& temp1)
 int main()
 {
 	int myArray[SizeArray];
-	Init(myArray, SizeArray);
+	Init(myArray, -1);
 
 	Player myPlayer;
 	Init(myPlayer);
